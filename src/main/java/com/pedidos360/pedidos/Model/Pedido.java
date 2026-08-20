@@ -21,11 +21,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Table(name="pedidos")
 public class Pedido implements Serializable {
-	private static final long serialVersionUID = 1L;
+	private static final Long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private long idPedido;
+	private Long idPedido;
 
 	@Column(name = "direccion", nullable = false)
 	private String direccion;
