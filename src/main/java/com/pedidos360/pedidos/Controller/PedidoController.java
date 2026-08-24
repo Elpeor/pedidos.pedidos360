@@ -59,7 +59,7 @@ public class PedidoController {
         try{
             Pedido oldPedido = service.getPedidoPorId(id);
             oldPedido.setDireccion(pedido.getDireccion());
-            oldPedido.setProductos(pedido.getProductos());
+            oldPedido.setIdPedidos(pedido.getIdPedidos());
             Pedido newPedido = service.savePedido(oldPedido);
             return ResponseEntity.ok(newPedido);
         }catch (Exception e) {

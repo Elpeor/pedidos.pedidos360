@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,14 +26,14 @@ public class Pedido implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long idPedido;
+	private Long IdPedidos;
 
 	@Column(name = "direccion", nullable = false)
 	private String direccion;
 
-	@Column(name = "productos", nullable = false)
+	@ElementCollection
+	@Column(name = "productos", nullable = true)
 	private List<Long> productos;
-
 
 }
 
